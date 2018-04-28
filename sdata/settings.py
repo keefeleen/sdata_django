@@ -77,14 +77,14 @@ WSGI_APPLICATION = 'sdata.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
- DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.mysql',
-         'OPTIONS': {
-             'read_default_file': os.path.join(BASE_DIR, 'sdata', 'mysql.conf'),
-         },
-     }
- }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': os.path.join(BASE_DIR, 'sdata', 'mysql.conf'),
+        },
+    }
+}
 
 
 # Password validation
@@ -131,7 +131,7 @@ DATE_FORMAT = 'Y-m-d'
 
 
 SUIT_CONFIG = {  # suit页面配置
-    'ADMIN_NAME': '工业企业数据库管理系统',
+    'ADMIN_NAME': '欢迎使用工业企业数据库管理系统',
     'LIST_PER_PAGE': 20,
     # 'MENU_ICONS': {
     #     'sites': 'icon-leaf',
@@ -230,4 +230,4 @@ LOGGING = {
 
 # 设定默认 logger
 import logging
-web_logger = logging.getLogger("sdata.web")
+logger = logging.getLogger("sdata.web")
