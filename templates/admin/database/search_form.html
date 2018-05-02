@@ -23,8 +23,9 @@
           {% endif %}
         {% endspaceless %}
 
+
         <input type="submit" value="{% trans 'Search' %}" class="btn btn-info"/>
-        &nbsp;
+
         {% if show_result_count %}
           <span class="small quiet result-count">{% blocktrans count counter=cl.result_count %}{{ counter }} result{% plural %}{{ counter }} results{% endblocktrans %}
             &nbsp; <a href="?{% if cl.is_popup %}{{ POPUP_VAR }}=1{% endif %}">
@@ -41,6 +42,17 @@
             {% if pair.0 != search_var %}<input type="hidden" name="{{ pair.0 }}" value="{{ pair.1 }}"/>{% endif %}
       {% endfor %}
 
+      <div class="asf">
+        <style>
+        .asf {
+            margin: 15px 0;
+        }
+        .asf label {
+            margin: 0 10px;
+        }
+        </style>
+        {{ asf }}
+      </div>
     </form>
   </div>
 {% endif %}

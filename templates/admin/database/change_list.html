@@ -1,5 +1,5 @@
 {% extends "admin/base_site.html" %}
-{% load i18n admin_static admin_list admin_urls suit_list suit_tags %}
+{% load i18n admin_static admin_list admin_urls suit_list suit_tags custom_search_form %}
 {% load url from suit_compat %}
 
 {% block extrastyle %}
@@ -72,7 +72,7 @@
             </div>
           {% endblock %}
 
-          {% block search %}{% search_form cl %}{% endblock %}
+          {% block search %}{% advanced_search_form cl %}{% endblock %}
         </div>
 
         {% block date_hierarchy %}
